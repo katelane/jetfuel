@@ -1,4 +1,9 @@
 <div class="homepage">
-  <h1>Little is Better!</h1>
-  <p>Make your big ugly url into something smaller and more manageable:</p>
+  <h1>LITTLE IS BETTER!</h1>
+  <h3>Turn your big ugly url into something smaller and more manageable:</h3>
+
+    <%= form_for @url do |f| %>
+      <%= f.text_field :full_url, placeholder: "Don't forget http:// or https://", class: "homeform" %><br>
+      <%= f.submit "Make it smaller!", class: "homebutton" %>
+    <% end %>
 </div>
