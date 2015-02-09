@@ -6,4 +6,16 @@
       <%= f.text_field :full_url, placeholder: "Don't forget http:// or https://", class: "homeform" %><br>
       <%= f.submit "Make it smaller!", class: "homebutton" %>
     <% end %>
+
+
+<p>Others have been here:</p>
+<%# unless @urls.empty? %>
+
+  <% @urls.each do |u| %>
+  <ul>
+    <li><%= u.title %> | <strong><%= link_to "localhost:3000/#{u.slug}", url_path(u.slug) %></strong> | <%= u.created_at %></li>
+  </ul>
+  <% end %>
+
+
 </div>
