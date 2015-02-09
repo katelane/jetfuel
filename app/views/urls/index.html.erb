@@ -7,15 +7,13 @@
       <%= f.submit "Make it smaller!", class: "homebutton" %>
     <% end %>
 
-
-<p>Others have been here:</p>
-<%# unless @urls.empty? %>
-
-  <% @urls.each do |u| %>
-  <ul>
-    <li><%= u.title %> | <strong><%= link_to "localhost:3000/#{u.slug}", url_path(u.slug) %></strong> | <%= u.created_at %></li>
-  </ul>
+<% unless @urls.empty? %>
+  <p>Others have been here:</p>
+    <% @urls.each do |u| %>
+    <ul>
+      <li><%= u.title %> | <strong><%= link_to "localhost:3000/#{u.slug}", url_path(u.slug) %></strong> | <%= u.created_at.strftime('%B %d, %Y') %></li>
+    </ul>
+    <% end %>
   <% end %>
-
 
 </div>

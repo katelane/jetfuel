@@ -1,7 +1,7 @@
 class UrlsController < ApplicationController
   def index
     @url = Url.new
-    @urls = Url.all
+    @urls = Url.visits(10)
   end
 
   def show

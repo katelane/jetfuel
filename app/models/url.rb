@@ -12,4 +12,11 @@ class Url < ActiveRecord::Base
   def grab_title
     self.title = TitleHandler.find_title(full_url)
   end
+
+  def self.visits(number)
+    results = all.sort_by do |url|
+    url.created_at
+    end
+  end
+
 end
