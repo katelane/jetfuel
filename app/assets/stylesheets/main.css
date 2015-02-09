@@ -24,3 +24,23 @@ body {
   border: 10px solid #512d82;
   border-radius: 50px;
 }
+
+.homeform {
+  width: 50%;
+  border: 2px solid #512d82;
+  border-radius: 10px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  padding: 10px;
+}
+
+.homebutton {
+  width: 15%;
+  height: 50px;
+  color: #fff;
+  font-size: 1em;
+  background: #512d82;
+  border: 0;
+  border-radius: 10px;
+}
