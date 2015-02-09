@@ -11,7 +11,7 @@
   <p>Others have been here:</p>
     <% @urls.each do |u| %>
     <ul>
-      <li><%= u.title %> | <strong><%= link_to "localhost:3000/#{u.slug}", url_path(u.slug) %></strong> | <%= u.created_at.strftime('%B %d, %Y') %></li>
+      <li><%= u.title %> | <%= link_to "litt.le/#{u.slug}", u.full_url, target: "blank" %> | <%= u.created_at.strftime('%B %d, %Y at %I:%M %p') %></li>
     </ul>
     <% end %>
   <% end %>

@@ -17,6 +17,6 @@ class Url < ActiveRecord::Base
     results = all.sort_by do |url|
     url.created_at
     end
+    results.reverse
   end
-
 end
