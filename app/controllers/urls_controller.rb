@@ -1,5 +1,4 @@
 class UrlsController < ApplicationController
-
   def index
     @url = Url.new
   end
@@ -23,5 +22,5 @@ class UrlsController < ApplicationController
   def url_params
     params.require(:url).permit(:full_url)
   end
-  
+
 end
